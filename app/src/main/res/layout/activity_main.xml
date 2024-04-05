@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText"
+    android:background="@color/main_color_bcgr" >
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:id="@+id/main_part"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints" >
+
+            <!--Название формы-->
+            <TextView
+                android:id="@+id/title_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:text="My Form"
+                android:textColor="@color/main_font_color"
+                android:fontFamily="@font/lalezar_regular"
+                android:textSize="35sp"
+                android:background="@drawable/background_title"
+                android:gravity="center"
+                android:elevation="15dp" />
+
+            <!--Личные данные-->
+            <TextView
+                android:id="@+id/lbl_personal_information"
+                android:layout_below="@id/title_form"
+                style="@style/lbl_main_category"
+                android:text="Personal information" />
+
+            <!--Фамилия-->
+            <TextView
+                android:id="@+id/lbl_surname"
+                android:layout_below="@id/lbl_personal_information"
+                android:layout_marginEnd="160dp"
+                style="@style/lbl_second_category"
+                android:text="Surname" />
+
+            <EditText
+                android:id="@+id/txtBox_surname"
+                android:layout_below="@id/lbl_surname"
+                android:layout_marginEnd="160dp"
+                style="@style/txtBox_second_category"
+                android:inputType="text"
+                android:hint="Ivanov"
+                android:autofillHints="usersurname"/>
+
+            <!--Имя-->
+            <TextView
+                android:id="@+id/lbl_name"
+                android:layout_below="@id/txtBox_surname"
+                android:layout_marginEnd="160dp"
+                style="@style/lbl_second_category"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/txtBox_name"
+                android:layout_below="@id/lbl_name"
+                android:layout_marginEnd="160dp"
+                style="@style/txtBox_second_category"
+                android:inputType="text"
+                android:hint="Ivan"
+                android:autofillHints="username"/>
+
+            <!--Возраст-->
+            <TextView
+                android:id="@+id/lbl_age"
+                android:layout_below="@id/lbl_personal_information"
+                android:layout_toEndOf="@+id/lbl_surname"
+                style="@style/lbl_second_category"
+                android:layout_marginStart="-130dp"
+                android:text="Age" />
+
+            <EditText
+                android:id="@+id/txtBox_age"
+                android:layout_below="@id/lbl_age"
+                android:layout_toEndOf="@+id/txtBox_surname"
+                style="@style/txtBox_second_category"
+                android:layout_marginStart="-130dp"
+                android:inputType="number"
+                android:hint="55"
+                android:autofillHints="userage"/>
+
+            <!--Пол-->
+            <TextView
+                android:id="@+id/lbl_gender"
+                android:layout_below="@id/txtBox_age"
+                android:layout_toEndOf="@+id/lbl_name"
+                style="@style/lbl_second_category"
+                android:layout_marginStart="-130dp"
+                android:text="Gender" />
+
+            <EditText
+                android:id="@+id/txtBox_gender"
+                android:layout_below="@id/lbl_gender"
+                style="@style/txtBox_second_category"
+                android:layout_toEndOf="@+id/txtBox_surname"
+                android:layout_marginStart="-130dp"
+                android:inputType="text"
+                android:hint="male"
+                android:autofillHints="gender"/>
+
+            <!--Почта-->
+            <TextView
+                android:id="@+id/lbl_email"
+                android:layout_below="@id/txtBox_name"
+                style="@style/lbl_second_category"
+                android:text="Email" />
+
+            <EditText
+                android:id="@+id/txtBox_email"
+                android:layout_below="@id/lbl_email"
+                style="@style/txtBox_second_category"
+                android:inputType="textEmailAddress"
+                android:hint="IvanovIvan@mail.ru"
+                android:autofillHints="emailAddress"/>
+
+            <!--Номер телефона-->
+            <TextView
+                android:id="@+id/lbl_phone"
+                android:layout_below="@id/txtBox_email"
+                style="@style/lbl_second_category"
+                android:text="Phone" />
+
+            <EditText
+                android:id="@+id/txtBox_phone"
+                android:layout_below="@id/lbl_phone"
+                style="@style/txtBox_second_category"
+                android:layout_marginEnd="130dp"
+                android:text=""
+                android:inputType="phone"
+                android:hint="89999999999"
+                android:autofillHints="phone"/>
+
+            <!--Любимые домашние животные-->
+            <TextView
+                android:id="@+id/lbl_favorite_pets"
+                android:layout_below="@id/txtBox_phone"
+                style="@style/lbl_main_category"
+                android:text="Favorite pets" />
+
+            <GridLayout
+                android:id="@+id/list_pet"
+                android:layout_below="@id/lbl_favorite_pets"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp"
+                android:rowCount="4"
+                >
+
+                <!--Кот-->
+                <CheckBox
+                    android:id="@+id/chkbox_cat"
+                    style="@style/chkBox"
+                    android:text="cat        " />
+
+                <!--Собака-->
+                <CheckBox
+                    android:id="@+id/chkbox_dog"
+                    style="@style/chkBox"
+                    android:text="dog      "
+                    android:layout_row="1"
+                    android:layout_column="0" />
+
+                <!--Кролик-->
+                <CheckBox
+                    android:id="@+id/chkbox_rabbit"
+                    style="@style/chkBox"
+                    android:text="rabbit"
+                    android:layout_row="2"
+                    android:layout_column="0" />
+
+                <!--Попугай-->
+                <CheckBox
+                    android:id="@+id/chkbox_parrot"
+                    style="@style/chkBox"
+                    android:text="parrot"
+                    android:layout_row="3"
+                    android:layout_column="0" />
+
+            </GridLayout>
+
+            <!--Вид работы-->
+            <TextView
+                android:id="@+id/lbl_type_of_work"
+                android:layout_below="@id/list_pet"
+                style="@style/lbl_main_category"
+                android:text="Type of work" />
+
+            <RadioGroup
+                android:id="@+id/list_work"
+                android:layout_below="@id/lbl_type_of_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:layout_marginStart="25dp">
+
+                <!--Волонтер-->
+                <RadioButton
+                    android:id="@+id/volunteer"
+                    style="@style/rdButton"
+                    android:text="volunteer    "/>
+
+                <!--С зарплатой-->
+                <RadioButton
+                    android:id="@+id/with_salary"
+                    style="@style/rdButton"
+                    android:text="with salary"/>
+            </RadioGroup>
+
+            <!--Желаемая зарплата-->
+            <TextView
+                android:id="@+id/lbl_salary"
+                android:layout_below="@id/list_work"
+                android:layout_marginStart="80dp"
+                android:layout_marginEnd="60dp"
+                style="@style/lbl_second_category"
+                android:text="*please indicate desired salary"
+                android:visibility="invisible"
+                />
+
+            <EditText
+                android:id="@+id/txtBox_salary"
+                android:layout_below="@id/lbl_salary"
+                android:layout_marginStart="80dp"
+                style="@style/txtBox_second_category"
+                android:layout_marginEnd="60dp"
+                android:text=""
+                android:inputType="number"
+                android:hint="100000"
+                android:autofillHints="salary"
+                android:visibility="invisible"/>
+
+            <!--Кнопка сохранить-->
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_below="@id/txtBox_salary"
+                style="@style/btn_save"
+                android:text="SAVE"
+                app:cornerRadius="15dp" />
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

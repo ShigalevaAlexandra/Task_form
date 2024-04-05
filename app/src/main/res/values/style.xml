@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="lbl_main_category">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:layout_marginEnd">25dp</item>
+        <item name="android:layout_marginTop">35dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textColor">@color/main_font_color</item>
+        <item name="android:fontFamily">@font/lalezar_regular</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="lbl_second_category">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:layout_marginEnd">25dp</item>
+        <item name="android:textColor">@color/second_font_color</item>
+        <item name="android:fontFamily">@font/lalezar_regular</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="txtBox_second_category">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:layout_marginEnd">25dp</item>
+        <item name="android:textColor">@color/input_text_color</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:background">@drawable/txtbox_area</item>
+    </style>
+
+    <style name="chkBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColor">@color/second_font_color</item>
+        <item name="android:fontFamily">@font/lalezar_regular</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawableStart">@drawable/chkbox_area</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="rdButton">
+        <item name="android:layout_width">165dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textColor">@color/second_font_color</item>
+        <item name="android:fontFamily">@font/lalezar_regular</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawableStart">@drawable/rdbutton_area</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="btn_save">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:layout_marginEnd">25dp</item>
+        <item name="android:layout_marginTop">35dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:backgroundTint">@color/second_color_bcgr</item>
+        <item name="android:textColor">@color/main_font_color</item>
+        <item name="android:fontFamily">@font/lalezar_regular</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="validation">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginEnd">30dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:textColor">@color/not_valid</item>
+        <item name="android:fontFamily">@font/lalezar_regular</item>
+    </style>
+</resources>
